@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>CakeShop</servlet-name>
+		<servlet-class>cakeshop.CakeShopServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CakeShop</servlet-name>
+		<url-pattern>/cakeshop</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SignupServlet</servlet-name>
+		<servlet-class>servlet.SignupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignupServlet</servlet-name>
+		<url-pattern>/SignupServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderOKServlet</servlet-name>
+		<servlet-class>servlet.OrderOKServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderOKServlet</servlet-name>
+		<url-pattern>/OrderOKServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SignupOKServlet</servlet-name>
+		<servlet-class>servlet.SignupOKServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignupOKServlet</servlet-name>
+		<url-pattern>/SignupOKServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SignupConfServlet</servlet-name>
+		<servlet-class>servlet.SignupConfServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignupConfServlet</servlet-name>
+		<url-pattern>/SignupConfServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderServlet</servlet-name>
+		<servlet-class>servlet.OrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderServlet</servlet-name>
+		<url-pattern>/OrderServlet</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
