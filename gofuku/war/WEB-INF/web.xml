@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Application</servlet-name>
+		<servlet-class>appli.ApplicationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Application</servlet-name>
+		<url-pattern>/application</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Main</servlet-name>
+		<servlet-class>appli.Main</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Main</servlet-name>
+		<url-pattern>/main</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RegisterUser</servlet-name>
+		<servlet-class>appli.RegisterUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterUser</servlet-name>
+		<url-pattern>/registerUser</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>WelcomServlet</servlet-name>
+		<servlet-class>appli.WelcomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WelcomServlet</servlet-name>
+		<url-pattern>/welcomServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>addOrder</servlet-name>
+		<servlet-class>appli.addOrder</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addOrder</servlet-name>
+		<url-pattern>/addorder</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
