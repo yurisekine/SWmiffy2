@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>予約状況確認ページ</title>
+        <script type="text/javascript" src="lib.js"></script>
+        <script type="text/javascript">
+        
+        <!--function callback(request){
+            var json = eval(request.responseText);
+            var res = '';
+            if (json.length == 1){
+                res += '<tr><td>' + json[0].id +'</td></tr>';
+                res += '<tr><td>' + json[0].name +'</td></tr>';
+                res += '<tr><td>' + json[0].mail +'</td></tr>';
+                res += '<tr><td>' + json[0].reserveDate +'</td></tr>';
+            } else {
+                for (var i = 0;i < json.length;i++){
+                    res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
+                    res += '<td><a href="' + json[i].name + '">' + json[i].mail + '</a></td>' ;
+                }
+            }
+            var obj = document.getElementById("datatable");
+            obj.innerHTML = res;
+        }//-->
+       
+        </script>
+    </head>
+    <body onload="getData(null);">
+    <h1>データの表示</h1>
+     
+    <table id="datatable" border="1">
+      <tr>
+        <td>wait...</td>
+      </tr>
+    </table>
+    <br>
+  </body>
+</html>
