@@ -25,13 +25,21 @@ public class LinkData {
      
     @Persistent
     private Date datetime;
+    
+    @Persistent
+    private String join;
  
-    public LinkData(String title, String url, String comment, Date datetime) {
+    @Persistent
+    private String name;
+    
+    public LinkData(String title, String url, String comment, Date datetime , String name/*, String join*/) {
         super();
         this.title = title;
         this.url = url;
         this.comment = comment;
         this.datetime = datetime;
+        this.name = name;
+        //this.join = join;
     }
  
     public Long getId() {
@@ -73,4 +81,22 @@ public class LinkData {
     public void setDatetime(Date datetime) {
         this.datetime = datetime;
     }
+    
+    public String getJoin() {
+        return join;
+    }
+ 
+    public void setJoin(String join) {
+        this.join = join;
+    }
+    
+    public String getName() {
+    	return name;
+    }
+    
+    public void setName(String name) { 
+    	this.name = name;
+    	
+    }
+    
 }
