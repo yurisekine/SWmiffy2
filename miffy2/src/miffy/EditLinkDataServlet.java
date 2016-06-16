@@ -27,6 +27,9 @@ public class EditLinkDataServlet extends HttpServlet {
         String title = req.getParameter("title");
         String url = req.getParameter("url");
         String comment = req.getParameter("comment");
+        String name = req.getParameter("name");
+        String place = req.getParameter("place");
+        String time = req.getParameter("time");
         
         javax.jdo.PersistenceManagerFactory factory = PMF.get();
         javax.jdo.PersistenceManager manager = factory.getPersistenceManager();
@@ -36,6 +39,9 @@ public class EditLinkDataServlet extends HttpServlet {
         data.setTitle(title);
         data.setUrl(url);
         data.setComment(comment);
+        data.setName(name);
+        data.setPlace(place);
+        data.setTime(time);
         manager.close();
         resp.sendRedirect("/index.html");
     }

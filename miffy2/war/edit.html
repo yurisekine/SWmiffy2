@@ -25,6 +25,9 @@
             document.getElementById("title").value = data.title;
             document.getElementById("url").value = data.url;
             document.getElementById("comment").value = data.comment;
+            document.getElementById("name").value = data.name;
+            document.getElementById("place").value = data.place;
+            document.getElementById("time").value = data.time;
         }
         //-->
         </script>
@@ -35,11 +38,16 @@
         <form method="post" action="/edit">
             <input type="hidden" id="id" name="id">
             <tr><th><p>イベントのタイトル:</p></th><td><input type="text" id="title" name="title"></td></tr>
+            <tr><th><p>日付:</p></th><td><input type="date" id="time" name ="time" value="2016/06/16"></td></tr>
+            <tr><th><p>場所:</p></th><td><input type="text" id="place" name = "place"></td></tr>
+            <tr><th><p>幹事:</p></th><td><input type="text" id="name" name ="name"></td></tr>
             <tr><th><p>幹事の連絡先:</p></th><td><input type="text" id="url" name="url"></td></tr>
-            <tr><th><p>コメント:</p></th><td><textarea id="comment" name="comment"></textarea></td></tr>
+            <tr><th><p>コメント:</p></th><td><textarea id="comment" id="comment" name="comment"></textarea></td></tr>
             <tr><th></th><td><input type="submit" value="追加"></td></tr>
         </form>
         </table>
+        
+        <div><a href="index.html">イベント一覧のページに戻る</a></div>
     </body>
 </html>
  

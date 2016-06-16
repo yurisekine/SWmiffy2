@@ -32,13 +32,21 @@ public class LinkData {
     @Persistent
     private String name;
     
-    public LinkData(String title, String url, String comment, Date datetime , String name/*, String join*/) {
+    @Persistent
+    private String place;
+    
+    @Persistent
+    private String time;
+    
+    public LinkData(String title, String url, String comment, Date datetime , String name, String place, String time/*, String join*/) {
         super();
         this.title = title;
         this.url = url;
         this.comment = comment;
         this.datetime = datetime;
         this.name = name;
+        this.place = place;
+        this.time = time;
         //this.join = join;
     }
  
@@ -97,6 +105,22 @@ public class LinkData {
     public void setName(String name) { 
     	this.name = name;
     	
+    }
+    
+    public String getPlace() {
+    	return place;
+    }
+    
+    public void setPlace(String place){
+    	this.place = place;
+    }
+    
+    public String getTime() {
+    	return time;
+    }
+    
+    public void setTime(String time) {
+    	this.time = time;
     }
     
 }

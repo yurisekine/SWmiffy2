@@ -23,20 +23,27 @@
         function callback(request){
             var json = eval(request.responseText);
             var res = '';
-            if (json.length == 1){
-                res += '<tr><td>' + json[0].id +'</td></tr>';
-                res += '<tr><td>' + json[0].title +'</td></tr>';
-                res += '<tr><td>' + json[0].url +'</td></tr>';
-                res += '<tr><td>' + json[0].comment +'</td></tr>';
+            
+            if (json.length == 1){　
+                res += '<tr><td>ID</td><td>' + json[0].id +'</td></tr>';
+                res += '<tr><td>イベント名</td><td>' + json[0].title +'</td></tr>';
+                res += '<tr><td>日付</td><td>' + json[0].time + '</td></tr>';
+                res += '<tr><td>幹事</td><td>' + json[0].name +'</td></tr>';
+                res += '<tr><td>連絡先</td><td>' + json[0].url +'</td></tr>';
+                res += '<tr><td>場所</td><td>' + json[0].place +'</td></tr>';
+                res += '<tr><td>コメント</td><td>' + json[0].comment +'</td></tr>';
             } else {
                 for (var i = 0;i < json.length;i++){
-                    res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
+                    res += '<tr><td>' + json[i].time + '</td><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
                     res += '<td>' + json[i].title + '</td>' +
                     '<td><a href="edit.html?id=' + json[i].id + '">Edit</td>' +
-                    '<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
+                    '<td><a href="del.html?id=' + json[i].id + '">Delete</td>' + //</tr>' +
+                    '<td><a href="join.html?id=' + json[i].id + '">参加する</td></tr>';
                 }
             }
             var obj = document.getElementById("datatable");
+           // var obj1 = document.getElementById("datatable1");
+           //obj1innerHTML = res1;
             obj.innerHTML = res;
         }
         
@@ -44,19 +51,27 @@
   </head>
   <body onload="getData(null);">
     <p1>＜・×・＞miffy＜・×・＞</p1><br>
-    <p>イベントの表示</p>
+    
+    
+    <p>イベント一覧</p>
      
     <table id="datatable" border="1">
       <tr>
         <td>wait...</td>
       </tr>
     </table>
+    
+    <p>参加イベント一覧</p>
+    
+   <!--  <table id="datatable1" border="1">
+  	  <tr>
+  		  <td>wait..</td>
+  	  </tr>
+    </table>    -->
+    
+ 
     <br>
     <div><a href="add.html">イベントの新規追加</a></div>
-    
-    <!--<div><a href="del.html">イベントの削除</a></div>
-    <div><a href="edit.html">イベントの編集</a></div>-->
-    
     <div><a href="index.html">イベント一覧のページに戻る</a></div>
     <div><a href="logout">ログアウト</a></div>
     

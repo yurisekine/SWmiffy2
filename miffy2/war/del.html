@@ -23,7 +23,11 @@
             var data = arr[0];
             var msg = '<table border="1"><tr><td>' + data.title + '</td></tr>';
             msg += '<tr><td>' + data.url + '</td></tr>';
+            msg += '<tr><td>' + data.name + '</td></tr>';
+            msg += '<tr><td>' + data.place + '</td></tr>';
+            msg += '<tr><td>' + data.time + '</td></tr>'
             msg += '<tr><td>' + data.comment + '</td></tr></table>';
+
             document.getElementById("data").innerHTML = msg;
             document.getElementById("id").value = data.id;
         }
@@ -38,5 +42,7 @@
             <input type="hidden" id="id" name="id">
             <input type="submit" value="削除">
         </form>
+        
+       <div><a href="index.html">イベント一覧のページに戻る</a></div>
         </body>
 </html>
