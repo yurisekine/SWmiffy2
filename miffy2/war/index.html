@@ -24,6 +24,9 @@
             var json = eval(request.responseText);
             var res = '';
             
+            var json1 = eval(request.responseText);
+            var res1 = '';
+            
             if (json.length == 1){　
                 res += '<tr><td>ID</td><td>' + json[0].id +'</td></tr>';
                 res += '<tr><td>イベント名</td><td>' + json[0].title +'</td></tr>';
@@ -41,9 +44,14 @@
                     '<td><a href="join.html?id=' + json[i].id + '">参加する</td></tr>';
                 }
             }
+            
+            for(var i = 0; i < json1.length; i++) {
+         	   res1 += '<tr><td>' + json1[i].id + '</td><td>' + json1[i].title + '</td></tr>';
+            }
+            
             var obj = document.getElementById("datatable");
-           // var obj1 = document.getElementById("datatable1");
-           //obj1innerHTML = res1;
+            var obj1 = document.getElementById("datatable1");
+            obj1.innerHTML = res1;
             obj.innerHTML = res;
         }
         
@@ -57,17 +65,17 @@
      
     <table id="datatable" border="1">
       <tr>
-        <td>wait...</td>
+        <td>AllEvent wait...</td>
       </tr>
     </table>
     
     <p>参加イベント一覧</p>
     
-   <!--  <table id="datatable1" border="1">
+    <table id="datatable1" border="1">
   	  <tr>
-  		  <td>wait..</td>
+  		  <td>JoinEvent wait...</td>
   	  </tr>
-    </table>    -->
+    </table>
     
  
     <br>
