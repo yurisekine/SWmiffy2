@@ -48,6 +48,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     	<servlet-name>del</servlet-name>
     	<url-pattern>/del</url-pattern>
 	</servlet-mapping>
+
 	<servlet>
     	<servlet-name>join</servlet-name>
     	<servlet-class>miffy.JoinLinkDataServlet</servlet-class>
