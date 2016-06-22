@@ -18,15 +18,12 @@
      </style>
     <title>miffy＜・×・＞</title>
     <script type="text/javascript" src="lib.js"></script>
+    <script type="text/javascript" src="lib2.js"></script>
         <script type="text/javascript">
         
         function callback(request){
             var json = eval(request.responseText);
             var res = '';
-            
-            var json1 = eval(request.responseText);
-            var res1 = '';
-            
             if (json.length == 1){　
                 res += '<tr><td>ID</td><td>' + json[0].id +'</td></tr>';
                 res += '<tr><td>イベント名</td><td>' + json[0].title +'</td></tr>';
@@ -44,20 +41,24 @@
                     '<td><a href="join.html?id=' + json[i].id + '">参加する</td></tr>';
                 }
             }
-            
-            for(var i = 0; i < json1.length; i++) {
-         	   res1 += '<tr><td>' + json1[i].id + '</td><td>' + json1[i].title + '</td></tr>';
-            }
-            
             var obj = document.getElementById("datatable");
+            obj.innerHTML = res;          
+        }
+            
+        function callback2(request){           
+            var json1 = eval(request.responseText);
+            var res1 = '';           
+           
+            for(var i = 0; i < json1.length; i++) {
+         	   res1 += '<tr><td>' + json1[i].id + '</td><td>' + json1[i].joinname + '</td><td>' + json1[i].title + '</td></tr>';
+            }                
             var obj1 = document.getElementById("datatable1");
             obj1.innerHTML = res1;
-            obj.innerHTML = res;
         }
         
         </script>
   </head>
-  <body onload="getData(null);">
+  <body onload="getData(null);getData1(null);">
     <p1>＜・×・＞miffy＜・×・＞</p1><br>
     
     

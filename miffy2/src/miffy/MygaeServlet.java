@@ -12,11 +12,10 @@ public class MygaeServlet extends HttpServlet {
             HttpServletResponse resp)
             throws IOException {
     	javax.jdo.PersistenceManagerFactory factory = PMF.get();
-        //PersistenceManagerFactory factory = PMF.get();
+    	//PersistenceManagerFactory factory = PMF.get();
     	
     	javax.jdo.PersistenceManager manager = factory.getPersistenceManager();
         //PersistenceManager manager = factory.getPersistenceManager();
-        
     	resp.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html");
         req.setCharacterEncoding("utf-8");
@@ -33,6 +32,7 @@ public class MygaeServlet extends HttpServlet {
                 LinkData data = (LinkData)manager.getObjectById(LinkData.class,Long.parseLong(param1));
                 list = new ArrayList();
                 list.add(data);
+                
             } catch(JDOObjectNotFoundException e){}
         }
         String res = "[";

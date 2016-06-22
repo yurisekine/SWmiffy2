@@ -15,6 +15,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>Joingae</servlet-name>
+		<servlet-class>miffy.Joingae</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Joingae</servlet-name>
+		<url-pattern>/joingae</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
     	<servlet-name>add</servlet-name>
     	<servlet-class>miffy.AddLinkDataServlet</servlet-class>
 	</servlet>
